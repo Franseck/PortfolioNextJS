@@ -9,7 +9,8 @@ const Navbar = () => {
         <span className="w-12 h-8 rounded bg-white text-black flex items-center justify-center">Ozturk</span>
         </Link>
       </div>
-      <div className="">2</div>
+      <div className=""></div>
+      
       </div>
   )
 }
