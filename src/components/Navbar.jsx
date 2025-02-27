@@ -91,7 +91,7 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="hidden md:flex gap-4 w-1/3">
-        <Link href="/">
+        <Link href="https://github.com/Franseck" target="_blank">
           <Image
             src="/github.png"
             alt=""
