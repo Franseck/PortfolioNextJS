@@ -12,6 +12,7 @@ const Brain = ({ scrollYProgress }) => {
   const rotatesBackward3 = useTransform(scrollYProgress, [0, 1], [0, -90]);
   const rotatesBackward4 = useTransform(scrollYProgress, [0, 1], [0, -45]);
   return (
+
     <div className="w-full h-full">
       <svg width="100%" height="100%">
         <defs>
@@ -1617,6 +1618,8 @@ const Brain = ({ scrollYProgress }) => {
         </g>
       </svg>
     </div>
+
+
   );
 };
 
