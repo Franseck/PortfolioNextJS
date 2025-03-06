@@ -123,7 +123,7 @@ const Navbar = () => {
             height={24}
           />
         </Link>
-        <Link href="/">
+        <Link href="https://ca.pinterest.com/franseck_/" target="_blank">
           <Image
             src="/pinterest.png"
             alt=""
@@ -131,7 +131,7 @@ const Navbar = () => {
             height={24}
           />
         </Link>
-        <Link href="/">
+        <Link href="https://www.linkedin.com/in/seckin-ozturk/" target="_blank">
           <Image
             src="/linkedin.png"
             alt=""

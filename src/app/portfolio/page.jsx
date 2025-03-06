@@ -10,7 +10,7 @@ const items = [
     color: "from-black/25 to-black",
     title: "Crypto Coin Tracker",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "",
+    img: "/coin2.png",
     link: "https://seckin-cryptoapp.vercel.app/",
   },
   {
@@ -18,7 +18,7 @@ const items = [
     color: "from-black/25 to-black",
     title: "Restaurant Website",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "",
+    img: "/rest2.png",
     link: "https://seckin-restaurant.vercel.app/",
   },
   {
@@ -26,7 +26,7 @@ const items = [
     color: "from-black/25 to-black",
     title: "Recipe Founder",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "",
+    img: "/gastro.jpg",
     link: "https://seckin-gastroapp.vercel.app/",
   },
   {
@@ -34,7 +34,7 @@ const items = [
     color: "from-black/25 to-black",
     title: "Travel Agency App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "",
+    img: "/travel.jpg",
     link: "https://seckin-travel-agency.vercel.app/",
   },
   {
@@ -42,7 +42,7 @@ const items = [
     color: "from-black/25 to-black",
     title: "Portfolio Book App",
     desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ab id ad nesciunt quo aut corporis modi? Voluptate, quos sunt dolorum facilis, id eum sequi placeat accusantium saepe eos laborum.",
-    img: "",
+    img: "/port2.jpg",
     link: "https://seckin-portfoliobook.vercel.app/",
   },
 ];
@@ -51,7 +51,7 @@ const PortfolioPage = () => {
   const ref = useRef();
 
   const { scrollYProgress } = useScroll({ target: ref });
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-80%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["17%", "-80%"]);
 
   return (
     <motion.div
@@ -92,7 +92,12 @@ const PortfolioPage = () => {
         </div>
       </div>
       <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
-        <h1 className="text-4xl">Do you have a project?</h1>
+       <Image
+               src="/Logo.png"
+               width={100}
+               height={150}
+               className="rounded-3xl"
+             />
         <div className="relative">
           <motion.svg
             animate={{ rotate: 360 }}
@@ -108,7 +113,7 @@ const PortfolioPage = () => {
             </defs>
             <text fill="#000">
               <textPath xlinkHref="#circlePath" className="text-xl">
-                Front-end Developer and UI Designer
+                Front-End Developer & UI/UX Designer
               </textPath>
             </text>
           </motion.svg>
@@ -116,7 +121,12 @@ const PortfolioPage = () => {
             href="/contact"
             className="w-16 h-16 md:w-28 md:h-28 absolute top-0 left-0 right-0 bottom-0 m-auto bg-black text-white rounded-full flex items-center justify-center"
           >
-            Hire Me
+                 <Image
+               src="/Logo.png"
+               width={100}
+               height={150}
+               className="rounded-full"
+             />
           </Link>
         </div>
       </div>
