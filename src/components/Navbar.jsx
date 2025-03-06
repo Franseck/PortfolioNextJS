@@ -99,7 +99,7 @@ const Navbar = () => {
             height={24}
           />
         </Link>
-        <Link href="/">
+        <Link href="https://dribbble.com/Franseck" target="_blank">
           <Image
             src="/dribbble.png"
             alt=""
@@ -107,7 +107,7 @@ const Navbar = () => {
             height={24}
           />
         </Link>
-        <Link href="/">
+        <Link href="https://www.instagram.com/Franseck_/" target="_blank">
           <Image
             src="/instagram.png"
             alt=""
@@ -115,7 +115,7 @@ const Navbar = () => {
             height={24}
           />
         </Link>
-        <Link href="/">
+        <Link href="https://www.facebook.com/seckin.ozturk.5492/" target="_blank">
           <Image
             src="/facebook.png"
             alt=""
