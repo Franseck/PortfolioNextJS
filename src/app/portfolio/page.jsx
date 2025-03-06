@@ -91,7 +91,7 @@ const PortfolioPage = () => {
           </motion.div>
         </div>
       </div>
-      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center">
+      <div className="w-screen h-screen flex flex-col gap-16 items-center justify-center text-center bg-gradient-to-r from-black to-black/25">
        <Image
                src="/Logo.png"
                width={100}

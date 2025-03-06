@@ -1,20 +1,30 @@
 "use client";
 import Brain from "@/components/Brain";
-import { motion, useInView, useScroll } from "framer-motion";
+import {
+  motion,
+  useInView,
+  useScroll,
+} from "framer-motion";
 import Image from "next/image";
 import { useRef } from "react";
 
 const AboutPage = () => {
   const containerRef = useRef();
 
-  const { scrollYProgress } = useScroll({ container: containerRef });
+  const { scrollYProgress } = useScroll({
+    container: containerRef,
+  });
 
   const skillRef = useRef();
   // const isSkillRefInView = useInView(skillRef, {once:true});
-  const isSkillRefInView = useInView(skillRef, { margin: "-100px" });
+  const isSkillRefInView = useInView(skillRef, {
+    margin: "-100px",
+  });
 
   const experienceRef = useRef();
-  const isExperienceRefInView = useInView(experienceRef, { margin: "-100px" });
+  const isExperienceRefInView = useInView(experienceRef, {
+    margin: "-100px",
+  });
 
   return (
     <motion.div
@@ -24,7 +34,10 @@ const AboutPage = () => {
       transition={{ duration: 1 }}
     >
       {/* CONTAINER */}
-      <div className="h-full overflow-scroll lg:flex" ref={containerRef}>
+      <div
+        className="h-full overflow-scroll lg:flex"
+        ref={containerRef}
+      >
         {/* TEXT CONTAINER */}
         <div className="p-4 sm:p-8 md:p-12 lg:p-20 xl:p-48 flex flex-col gap-24 md:gap-32 lg:gap-48 xl:gap-64 lg:w-2/3 lg:pr-0 xl:w-1/2">
           {/* BIOGRAPHY CONTAINER */}
@@ -32,27 +45,36 @@ const AboutPage = () => {
             {/* BIOGRAPHY IMAGE */}
 
             {/* BIOGRAPHY TITLE */}
-            <h1 className="font-bold text-2xl">BIOGRAPHY</h1>
+            <h1 className="font-bold text-2xl">
+              BIOGRAPHY
+            </h1>
             {/* BIOGRAPHY DESC */}
             <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-              harum quibusdam cupiditate nobis accusamus sed aut aperiam,
-              reiciendis numquam! Voluptas voluptatibus obcaecati dolore itaque
-              suscipit! Vel doloremque numquam quam nihil.
+              Lorem ipsum dolor sit amet consectetur
+              adipisicing elit. Nostrum harum quibusdam
+              cupiditate nobis accusamus sed aut aperiam,
+              reiciendis numquam! Voluptas voluptatibus
+              obcaecati dolore itaque suscipit! Vel
+              doloremque numquam quam nihil.
             </p>
             {/* BIOGRAPHY QUOTE */}
             <span className="italic">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Lorem ipsum dolor sit amet consectetur
+              adipisicing elit.
             </span>
             {/* BIOGRAPHY SIGN SVG*/}
             <div className="self-end">
-          <p className="font-mono"> Seckin</p>
+              <p className="font-mono"> Seckin</p>
             </div>
             {/* BIOGRAPHY SCROLL SVG */}
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+              transition={{
+                repeat: Infinity,
+                duration: 3,
+                ease: "easeInOut",
+              }}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +86,11 @@ const AboutPage = () => {
                 stroke="#000000"
                 strokeWidth="1"
               ></path>
-              <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
+              <path
+                d="M12 6V14"
+                stroke="#000000"
+                strokeWidth="1"
+              ></path>
               <path
                 d="M15 11L12 14L9 11"
                 stroke="#000000"
@@ -73,7 +99,10 @@ const AboutPage = () => {
             </motion.svg>
           </div>
           {/* SKILLS CONTAINER */}
-          <div className="flex flex-col gap-12 justify-center" ref={skillRef}>
+          <div
+            className="flex flex-col gap-12 justify-center"
+            ref={skillRef}
+          >
             {/* SKILL TITLE */}
             <motion.h1
               initial={{ x: "-300px" }}
@@ -169,7 +198,11 @@ const AboutPage = () => {
             <motion.svg
               initial={{ opacity: 0.2, y: 0 }}
               animate={{ opacity: 1, y: "10px" }}
-              transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+              transition={{
+                repeat: Infinity,
+                duration: 3,
+                ease: "easeInOut",
+              }}
               viewBox="0 0 24 24"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -181,7 +214,11 @@ const AboutPage = () => {
                 stroke="#000000"
                 strokeWidth="1"
               ></path>
-              <path d="M12 6V14" stroke="#000000" strokeWidth="1"></path>
+              <path
+                d="M12 6V14"
+                stroke="#000000"
+                strokeWidth="1"
+              ></path>
               <path
                 d="M15 11L12 14L9 11"
                 stroke="#000000"
@@ -197,7 +234,9 @@ const AboutPage = () => {
             {/* EXPERIENCE TITLE */}
             <motion.h1
               initial={{ x: "-300px" }}
-              animate={isExperienceRefInView ? { x: "0" } : {}}
+              animate={
+                isExperienceRefInView ? { x: "0" } : {}
+              }
               transition={{ delay: 0.2 }}
               className="font-bold text-2xl"
             >
@@ -206,29 +245,28 @@ const AboutPage = () => {
             {/* EXPERIENCE LIST */}
             <motion.div
               initial={{ x: "-300px" }}
-              animate={isExperienceRefInView ? { x: "0" } : {}}
+              animate={
+                isExperienceRefInView ? { x: "0" } : {}
+              }
               className=""
             >
               {/* EXPERIENCE LIST ITEM */}
               <div className="flex justify-between h-48">
                 {/* LEFT */}
                 <div className="w-1/3 ">
+                  {/* JOB DATE */}
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    2023 - Present
+                  </div>
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior JavaScript Engineer
+                    Freelance Front End Developer
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I led web development, offering expertise in JavaScript
-                    frameworks.{" "}
-                  </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    2024 - Present
-                  </div>
-                  {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Apple
+                    Provided React-based web solutions,
+                    applying a range of technologies to
+                    address client requirements.{" "}
                   </div>
                 </div>
                 {/* CENTER */}
@@ -254,45 +292,52 @@ const AboutPage = () => {
                     <div className="absolute w-5 h-5 rounded-full ring-4 ring-red-400 bg-white -left-2"></div>
                   </div>
                 </div>
-                {/* RIGHT */}
+
                 <div className="w-1/3 ">
-                  {/* JOB TITLE */}
+                  {/* JOB DATE */}
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    2017 - 2024{" "}
+                  </div>
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Senior React Developer
+                    Freelance Photographer
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I spearheaded React-based application development,
-                    leveraging advanced skills.{" "}
+                    Creating compelling visual content,
+                    including photography and aerial
+                    footage.{" "}
                   </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    2019 - 2024{" "}
-                  </div>
+
                   {/* JOB COMPANY */}
-                  <div className="p-1 rounded bg-white text-sm font-semibold w-fit">
-                    Microsoft
+                  <div className="p-1 rounded bg-gray-500 text-sm font-semibold w-fit">
+                    Adobe Stock
                   </div>
                 </div>
               </div>
+
               {/* EXPERIENCE LIST ITEM */}
               <div className="flex justify-between h-48">
+                {/* JOB DATE */}
+
                 {/* LEFT */}
                 <div className="w-1/3 ">
+                  <div className="p-3 text-red-400 text-sm font-semibold">
+                    2010 - 2021{" "}
+                  </div>
                   {/* JOB TITLE */}
                   <div className="bg-white p-3 font-semibold rounded-b-lg rounded-s-lg">
-                    Freelancer{" "}
+                    Foreign Trade Operations Unit Officer{" "}
                   </div>
                   {/* JOB DESC */}
                   <div className="p-3 text-sm italic">
-                    I provided web solutions, applying a range of technologies
-                    to address client requirements.{" "}
+                    Responsible of preparation letters of
+                    credit drafts.{" "}
                   </div>
-                  {/* JOB DATE */}
-                  <div className="p-3 text-red-400 text-sm font-semibold">
-                    2010 - 2019{" "}
+                  <div className="p-1 rounded bg-gray-500 text-sm font-semibold w-fit">
+                    Turkiye Is Bankasi AS
                   </div>
                 </div>
+
                 {/* CENTER */}
                 <div className="w-1/6 flex justify-center">
                   {/* LINE */}
@@ -302,7 +347,7 @@ const AboutPage = () => {
                   </div>
                 </div>
                 {/* RIGHT */}
-                <div className="w-1/2 "></div>
+                <div className="w-1/3 "></div>
               </div>
             </motion.div>
           </div>

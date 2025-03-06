@@ -1,8 +1,8 @@
-import { Inter } from "next/font/google";
+import { Fredoka } from "next/font/google";
 import "./globals.css";
 import TransitionProvider from "@/components/TransitionProvider";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Fredoka({ subsets: ["latin"] });
 
 export const metadata = {
   title: "SeckinPortfolio App",
