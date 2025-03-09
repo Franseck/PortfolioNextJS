@@ -34,10 +34,10 @@ const TransitionProvider = ({ children }) => {
           initial={{ height: "140vh" }}
           animate={{ height: "0vh", transition: { delay: 0.5 } }}
         />
-        <div className="h-24">
+        <div className="h-24 relative bg-gradient-to-r from-black/25 to-black">
           <Navbar />
         </div>
-        <div className="h-[calc(100vh-6rem)]">{children}</div>
+        <div className="absolute h-[calc(100vh-6rem)]">{children}</div>
       </div>
     </AnimatePresence>
   );
