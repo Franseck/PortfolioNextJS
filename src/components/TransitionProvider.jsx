@@ -37,7 +37,7 @@ const TransitionProvider = ({ children }) => {
         <div className="h-24 relative bg-gradient-to-r from-black/25 to-black">
           <Navbar />
         </div>
-        <div className="absolute h-[calc(100vh-6rem)]">{children}</div>
+        <div className="absolute h-[calc(100vh-7rem)]">{children}</div>
       </div>
     </AnimatePresence>
   );
