@@ -3,6 +3,8 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
+import { RiScrollToBottomLine } from "react-icons/ri";
+
 
 const items = [
   {
@@ -61,10 +63,12 @@ const PortfolioPage = () => {
       transition={{ duration: 1 }}
     >
       <div className="h-[600vh] relative" ref={ref}>
-        <div className="w-screen h-[calc(100vh-6rem)] flex items-center justify-center text-8xl text-center">
-          My Works
+        <div className="w-screen h-[calc(100vh-6rem)] flex flex-col items-center justify-center text-7xl text-center gap-12 ">
+         <h1>My Works</h1> 
+         <div className="animate-bounce" > <RiScrollToBottomLine /> </div> 
         </div>
-        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden">
+
+        <div className="sticky top-0 flex h-screen gap-4 items-center overflow-hidden bg-black/25">
           <motion.div style={{ x }} className="flex">
             <div className="h-auto w-auto flex items-center justify-center bg-gradient-to-r from-black/25 to-black" />
             {items.map((item) => (
